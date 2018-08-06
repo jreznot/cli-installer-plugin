@@ -1,9 +1,9 @@
-# CUBA CLI Sample Plugin
+# CUBA CLI Installer Plugin
 
 <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat" alt="license" title=""></a>
-[ ![Download](https://api.bintray.com/packages/cuba-platform/main/cli-ide-opener/images/download.svg) ](https://bintray.com/cuba-platform/main/cli-ide-opener/_latestVersion)
 
-Simple plugin that adds `idea` command to [CUBA CLI](https://github.com/cuba-platform/cuba-cli), allowing user to open project in IntelliJ IDEA.
+
+Simple plugin that adds `add-plugin` command to [CUBA CLI](https://github.com/cuba-platform/cuba-cli), allowing user to install plugins from URL.
 
 Read about plugin development [here](https://github.com/cuba-platform/cuba-cli/wiki/Plugin-Development).
 
@@ -15,5 +15,5 @@ Read about plugin development [here](https://github.com/cuba-platform/cuba-cli/w
 It will print loaded plugins:
 ```
 cuba:~/$ cuba-cli 
-Loaded plugin com.haulmont.cli.tutorial.IdeaOpenerPlugin
+Loaded plugin com.haulmont.cli.tutorial.PluginInstallerPlugin
 ```
