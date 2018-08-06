@@ -22,15 +22,16 @@ module com.haulmont.cuba.cli.installer {
     requires kotlin.reflect;
 
     requires jcommander;
+    requires jline;
+    requires jansi;
 
     requires com.haulmont.cuba.cli;
     requires com.google.common;
     requires kodein.di.core.jvm;
     requires kodein.di.generic.jvm;
-    requires practicalxml;
     
     opens com.haulmont.cli.installer;
-    exports com.haulmont.cli.installer;
+    opens com.haulmont.cli.installer.addplugin;
 
     provides CliPlugin with com.haulmont.cli.installer.InstallerPlugin;
 }

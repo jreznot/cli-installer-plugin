@@ -17,6 +17,7 @@
 package com.haulmont.cli.installer
 
 import com.google.common.eventbus.Subscribe
+import com.haulmont.cli.installer.addplugin.AddPluginCommand
 import com.haulmont.cuba.cli.CliPlugin
 import com.haulmont.cuba.cli.event.InitPluginEvent
 
