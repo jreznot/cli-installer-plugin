@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-import com.haulmont.cuba.cli.CliPlugin;
+package com.haulmont.cli.installer
 
-module com.haulmont.cuba.cli.installer {
-    requires java.base;
-    requires kotlin.stdlib;
-    requires kotlin.reflect;
+import com.beust.jcommander.Parameters
+import com.haulmont.cuba.cli.commands.AbstractCommand
+import com.haulmont.cuba.cli.kodein
+import org.kodein.di.generic.instance
+import java.io.PrintWriter
 
-    requires jcommander;
+@Parameters(commandDescription = "Opens project in IntelliJ IDEA")
+class AddPluginCommand : AbstractCommand() {
 
-    requires com.haulmont.cuba.cli;
-    requires com.google.common;
-    requires kodein.di.core.jvm;
-    requires kodein.di.generic.jvm;
-    requires practicalxml;
-    
-    opens com.haulmont.cli.installer;
-    exports com.haulmont.cli.installer;
+    private val writer: PrintWriter by kodein.instance()
 
-    provides CliPlugin with com.haulmont.cli.installer.InstallerPlugin;
+    override fun preExecute() = checkProjectExistence()
+
+    override fun run() {
+
+    }
 }

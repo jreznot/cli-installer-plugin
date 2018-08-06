@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.haulmont.cli.tutorial
+package com.haulmont.cli.installer
 
 import com.google.common.eventbus.Subscribe
 import com.haulmont.cuba.cli.CliPlugin
 import com.haulmont.cuba.cli.event.InitPluginEvent
 
-class IdeaOpenerPlugin : CliPlugin {
+class InstallerPlugin : CliPlugin {
     @Subscribe
     fun onInit(event: InitPluginEvent) {
         event.commandsRegistry {
-            command("idea", IdeaOpenCommand())
+            command("add-plugin", AddPluginCommand())
         }
     }
 }
